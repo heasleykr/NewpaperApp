@@ -135,3 +135,9 @@ LOGOUT_REDIRECT_URL = 'home'
 
 #Crispy Configuration
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+#Email backend 'smtp: simple mail transport protocol'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+#SendGrid for testing only. Blank Fields Out before pushing !
+
