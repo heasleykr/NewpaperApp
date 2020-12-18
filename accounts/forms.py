@@ -10,11 +10,11 @@ class CustomUserCreationForm(UserCreationForm):
         model = CustomUser
         #appending to a tuple with appending another tuple to create a new one. Tuples are immutable (unchangeable), so you must make a new one. 
         # fields = UserCreationForm.Meta.fields + ('age', 'nice_name',) 
-        fields = ('username', 'email', 'age', 'nice_name')
+        fields = ('username', 'email', 'age',)
 
 class CustomUserChangeForm(UserChangeForm):
         #Meta means 'about itself'
     class Meta(UserChangeForm):
         model = CustomUser
         # fields = UserChangeForm.Meta.fields
-        fields = ('username', 'email', 'age', 'nice_name')
+        fields = ('username', 'email', 'age',)

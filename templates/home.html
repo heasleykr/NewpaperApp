@@ -4,12 +4,11 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-        Hi {{ user.username}}! You are {{ user.age }} years old.
-        <p><a class="btn btn-outline-secondary" href="{% url 'logout' %}">Log Out</a></p>
-    {% else %}
-        <p>You are not logged in</p>
-        <a class="btn btn-outline-secondary" href="{% url 'login' %}">Log In</a>
-        <a class="btn btn-primary ml-2" href="{% url 'signup' %}">Sign Up</a>
-    {% endif %}
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-4">Newspaper App</h1>
+        <p class="lead">A Newspaper Website Built with Django</p>
+        <p class="lead"><a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">View All Articles</a>
+        </p>
+    </div>
 {% endblock content %}

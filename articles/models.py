@@ -23,6 +23,7 @@ class Comment(models.Model):
     comment = models.CharField(max_length=140)
     author = models.ForeignKey(
         get_user_model(),
+        #CASCADE in a DB workflow that deletes the obj and THEN any follow on comments emmenating from that deleted obj. 
         on_delete=models.CASCADE,
     )
 
