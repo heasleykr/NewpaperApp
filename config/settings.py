@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': env.dj_db_url("DATABASE_URL")
+    'default': env.dj_db_url('DATABASE_URL')
 }
 
 
@@ -152,8 +152,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'heasleykr@gmail.com'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_SECRET = env.str("EMAIL_HOST_SECRET")
+EMAIL_HOST_PASSWORD= env.str("EMAIL_HOST_SECRET")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-TIME_ZONE = 'America/Los Angeles'
+TIME_ZONE = 'America/Los_Angeles'
