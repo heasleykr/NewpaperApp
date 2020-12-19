@@ -3,6 +3,8 @@
 {% block title %}Articles{% endblock title %}
 
 {% block content %}
+<div id="list" class="container">
+    <h1 id="list_header">Scroll Through The Setlist</h1>
     {% for article in object_list %}
     <div class="card">
         <div class="card-header">
@@ -26,4 +28,5 @@
     </div>
     <br />
     {% endfor %} 
+</div>
 {% endblock content %}
