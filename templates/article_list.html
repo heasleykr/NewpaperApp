@@ -4,29 +4,39 @@
 
 {% block content %}
 <div id="list" class="container">
-    <h1 id="list_header">Scroll Through The Setlist</h1>
-    {% for article in object_list %}
-    <div class="card">
-        <div class="card-header">
-            <span class="font-weight-bold">{{ article.title }}</span>
-            <span class="text-muted">by {{ article.author }} | {{ article.date }}</span>
-        </div>
-        <div class="card-body">
-            <p>{{ article.body }}</p>
-            <a href="{% url 'article_edit' article.pk %}">Edit</a> | <a href="{% url 'article_delete' article.pk %}">Delete</a>
-        </div>
-        <div class="card-footer">
-            {% for comment in article.comments.all %}
-            <p>
-                <span class="font-weight-bold">
-                    {{ comment.author }}
-                </span>
-                {{ comment }}
-            </p>
-            {% endfor %}       
-        </div>
-    </div>
-    <br />
-    {% endfor %} 
+    <h1 id="list_header">Roll Through The Articles</h1>
+        <div class="d-flex flex-row">
+            <div id="list-example" class="list-group list-group-flush">
+                {% for article in object_list %}
+                    <a id="listNav" class="list-group-item list-group-item-action" href="#{{ article.title }}">{{ article.title }}</a>
+                {% endfor %} 
+            </div>
+                <div id="scrollArea" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example bg-transparent" tabindex="0">
+                    {% for article in object_list %}
+                        <div class="card bg-transparent">
+                            <div id="header"
+                            class="card-header border-light bg-transparent">
+                                <span id="{{ article.title }}" class="font-weight-bold">{{ article.title }}</span>
+                                <span id="user">by {{ article.author }} | {{ article.date }}</span>
+                            </div>
+                            <div id="card-body" class="card-body bg-transparent">
+                                <p>{{ article.body }}</p>
+                                <a class="link-warning" href="{% url 'article_edit' article.pk %}">Edit</a> | <a class="link-warning" href="{% url 'article_delete' article.pk %}">Delete</a>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                {% for comment in article.comments.all %}
+                                    <p>
+                                        <span class="font-weight-bold">
+                                            {{ comment.author }}
+                                        </span>
+                                        {{ comment }}
+                                    </p>
+                                {% endfor %}       
+                            </div>
+                        </div>
+                    {% endfor %} 
+                </div>
+            <br />
+        </div>   
 </div>
 {% endblock content %}

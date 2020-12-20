@@ -4,7 +4,8 @@
 {% block content %}
 <div id="new_Contain" class="container">
     <h1 id="new">New Composition</h1>
-        <form action="" method="post">{% csrf_token %}
+    <h3 id="info">Make a new article entry for the drummer community. Tap the 'Save' so we can be inspired and fueled to go practice more!</h3>
+        <form id="newBlog" action="" method="post">{% csrf_token %}
         {{ form.as_p }}
             <button class="btn btn-outline-light btn-lg m1-2" type="submit">Save</button>
         </form>
