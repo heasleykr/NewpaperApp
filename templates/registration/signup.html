@@ -5,8 +5,9 @@
 {% block title %}Sign Up{% endblock title %}
 
 {% block content %}
-<h2>Sign Up</h2>
-<form method="post">
+<h2 class="articleHeads" id="signHead">Sign Up</h2>
+<h4 class="articleInfo">The world can never have too many percussionists and drummers. Let's get you grooving with the rest of the gang in here: </h4>
+<form id="signUp" method="post">
     {% csrf_token %}
     {{ form|crispy }}
     <button class="btn btn-outline-success" type="submit">Sign Up</button>

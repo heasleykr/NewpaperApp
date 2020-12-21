@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Edit</h1>
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn btn-info m1-2" type="submit">Update</button>
-</form>
+<div class="new_Contain" class="container">
+<h1 class="articleHeads" id="editHead">Update Article</h1>
+<h3 class="articleInfo">Practice makes perfect...let's refine this content.</h3>
+    <form class="articleForms" action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-outline-light m1-2" type="submit">Update</button>
+    </form>
+</div>
 {% endblock content %}

@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Delete</h1>
-<form action="" method="post">{% csrf_token %}
-    <p>Are you sure you want to delete "{{ article.title }}"?</p>
-    <button class="btn btn-danger m1-2" type="submit">Confirm</button>
-</form>
+<div class="new_Contain" class="container">
+    <h1 class="articleHeads" id="deleteHead">Delete Article</h1>
+    <h3 class="articleInfo">We all have recordings of shows we wish we could delete...</h3>
+    <form id="deleteForm" class="articleForms" action="" method="post">{% csrf_token %}
+        <p>BUT...Are you sure you want to delete "{{ article.title }}"?</p>
+        <button class="btn btn-outline-danger m1-2" type="submit">Delete</button>
+    </form>
+</div>
 {% endblock content %}
