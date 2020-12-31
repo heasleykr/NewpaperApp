@@ -10,4 +10,3 @@ from django.db import models
 # Together these can store and empty 'no value' in the DB. 
 class CustomUser(AbstractUser):
         age = models.PositiveIntegerField(null = True, blank=True)
-        nice_name = models.CharField(null = True, blank=True, max_length=50)
