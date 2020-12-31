@@ -4,11 +4,13 @@
 {% block title %}Log In{% endblock title %}
 
 {% block content %}
-<h2 class="articleHeads" id="loginHead">Log In</h2>
-<h3 class="articleInfo">Can't get enough of us, right? Take that practice break and come hang with us. The drumset will always be there.</h3>
-<form class="articleForms" id="loginForm" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button id="login" class="btn btn-outline-success ml-2" type="submit">Log In</button>
-</form>
+<div id="loginMain">
+    <h2 class="articleHeads" id="loginHead">Log In</h2>
+    <h3 class="articleInfo">Can't get enough of us, right? Take that practice break and come hang with us. The drumset will always be there.</h3>
+    <form class="articleForms" id="loginForm" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button id="login" class="btn btn-outline-success ml-2" type="submit">Log In</button>
+    </form>
+</div>
 {% endblock content %}

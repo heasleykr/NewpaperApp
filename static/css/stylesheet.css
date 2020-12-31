@@ -8,10 +8,10 @@
     background-size: cover;
 }
 #news_Intro, #django{
-    color: #5a422f;
+    color: #968273;
 } 
 
-#homeView{
+#homeView, #loginMain{
     height: 50rem;
 }
 /* Articles */
@@ -38,7 +38,6 @@
     font-family: 'Poiret One', cursive;
 }
 .articleForms{
-    /* background-color: #9682739f; */
     background-color: #9e9c9a3b;
     color: white;
     padding: 3rem;
