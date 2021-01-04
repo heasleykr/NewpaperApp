@@ -2,6 +2,6 @@ __pycache__/
 news/*
 .vscode/*
 .env
-db.sqlite3
-.DB_Store
+# db.sqlite3
+# .DB_Store
  
